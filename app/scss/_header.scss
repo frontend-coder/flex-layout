@@ -1,4 +1,7 @@
-
+body {
+	position: relative;
+	background-color: deepskyblue;
+}
 .header_fon {
 	background-color: red;
 	min-height: 600px;
@@ -11,3 +14,118 @@ header {
 	text-align: center;
 	color:#fff;
 }
+.wrapper{
+	transition-duration:.5s;
+	transition-timing-function:swing;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: relative;
+// padding: 100px 40px;
+}
+
+.wrapper.open {
+	transform:translateX(250px) translateY(50px);
+}
+
+.opennav{
+	transition-duration:.5s;
+	transition-timing-function:swing;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	background-color: deepskyblue;
+	top:20px;
+	left:20px;
+	z-index: 9;
+// padding: 100px 40px;
+}
+
+.opennav:hover{
+	cursor: pointer;
+}
+
+.opennav .icon{
+	transition-duration:.2s;
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	top:24px;
+	left:10px;
+}
+
+.opennav .icon:before,
+.opennav .icon:after{
+	left:0;
+	transition-duration:.2s;
+	position: absolute;
+	background-color: #fff;
+	width: 30px;
+	height: 2px;
+	content: '';
+}
+.opennav .icon:before {
+	top:-7px;
+}
+.opennav .icon:after{
+	top:7px;
+}
+.opennav.open {
+	transform:translateX(250px) translateY(50px);
+}
+
+.opennav.open .icon:before,
+.opennav.open .icon:after{
+	top:0;
+}
+.opennav.open .icon {
+background-color: transparent;
+}
+.opennav.open .icon:before {
+	transform:rotate(-45deg);
+}
+
+.opennav.open .icon:after {
+	transform:rotate(45deg);
+}
+
+nav {
+background-color: deepskyblue;
+width: 250px;
+height: 100%;
+position: fixed;
+left:0;
+top:0;
+padding-top: 50px;
+overflow: hidden;
+}
+
+nav ul {
+width: 250px;
+//margin-top: 50px;
+}
+
+
+nav ul:hover li {
+color:rgba(255, 255,255, 0.5);
+
+	}
+
+nav ul li {
+	transition-duration:.25s;
+	display: block;
+	padding: 5px 40px;
+	color:#fff;
+	letter-spacing: 0.02rem;
+	text-align: right;
+}
+
+nav ul li a{
+text-transform: uppercase;
+color:#fff;
+text-decoration: none;
+cursor: pointer;
+
+	}
